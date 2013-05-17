@@ -24,7 +24,7 @@ function _iga_lf_river(fyre, authDelegate, $){
     if(options.hashchange){ //default tabbing behavior is no url fragment, options.hashchange will use fragment, pushState via History.js using state is custom.
     	this._hashchange = true;
     	$(window).bind('hashchange', function(){
-    		r.changeCollection(this._getFragment(location.hash));
+    		r.changeCollection(r._getFragment(location.hash));
     	});
     }
     
@@ -59,7 +59,7 @@ function _iga_lf_river(fyre, authDelegate, $){
   river.prototype.changeCollection = function(c, callback){
 	var r = this,
 	    config = $.extend({}, r.config, r.collections[c]);
-    if(c && c != "" && config.articleId && config.articleId != r._conv && r.fyre){
+    if(c && c != "" && c != r._conv && config.articleId  && r.fyre){
 	    r.fyre.changeCollection(config);
     	r._conv = c;
     	if(callback){callback(this, config);}
