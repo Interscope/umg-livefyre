@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+		<script type="text/javascript" src="http://zor.t402.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+		<script type="text/javascript" src="../js/iga-livefyre-river.js"></script>
+	</head>
+	<body>
+		<ul id="livefyre-river-tabs">
+			<li><button type="button" data-fyre-collection="jessicasanchez">Jessica Sanchez</button></li>
+			<li><button type="button" data-fyre-collection="scottymccreery">Scotty McCreery</button></li>
+			<li><button type="button" data-fyre-collection="nickiminaj">Nicki Minaj</button></li>
+		</ul>
+		<div id="livefyre-river" ></div>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			var river = new LivefyreRiver($('#livefyre-river'), {
+				'jessicasanchez':{ siteId:304004, articleId:'sh_col_91_1368747617'},
+				'scottymccreery':{siteId:304004, articleId:'sh_col_92_1368747692'},
+				'nickiminaj':{siteId:304004, articleId:'sh_col_90_1368747562'} }, {network: 'umg-int-1.fyre.co', hashchange:true});
+			river.loadCollection("jessicasanchez");
+			$("#livefyre-river-tabs button").click(function(e){ river.changeCollection($(this).attr("data-fyre-collection")); });
+		});
+		</script>
+	</body>
+</html>
