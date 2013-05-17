@@ -7,7 +7,7 @@ UMG Livefyre Integration and Sample Interfaces
 #Livefyre River
 /js/iga-livefyre-river.js
 ---
-A prototype "river" experience utilizing the Livefyre [Change Collection Function https://github.com/Livefyre/livefyre-docs/wiki/JavaScript-API#wiki-change-collection ]. The river is not tied to any specific ui elements, but can be easily bound to click events via jquery. A hashchange event callback is also supported.
+A prototype "river" experience utilizing the Livefyre [Change Collection Function] (https://github.com/Livefyre/livefyre-docs/wiki/JavaScript-API#wiki-change-collection). The river is not tied to any specific ui elements, but can be easily bound to click events via jquery. A hashchange event callback is also supported.
 
 ##Example
 http://jsfiddle.net/Interscope/C2AAG/

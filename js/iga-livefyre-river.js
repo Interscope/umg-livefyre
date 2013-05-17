@@ -69,15 +69,3 @@ function _iga_lf_river(fyre, authDelegate, $){
   
   return river;
 }
-/** @example
- *  @see http://fyre.umg.edrupalgardens.com/content/livefyre-river  
-
-$(document).ready(function(){
-	var river = new LivefyreRiver($('#livefyre-river'), {
-		'jessicasanchez':{ siteId:304004, articleId:'sh_col_91_1368747617'},
-		'scottymccreery':{siteId:304004, articleId:'sh_col_92_1368747692'},
-		'nickiminaj':{siteId:304004, articleId:'sh_col_90_1368747562'} }, {network: 'umg-int-1.fyre.co', hashchange:true});
-	river.loadCollection("jessicasanchez");
-	$("#livefyre-river-tabs button").click(function(e){ river.changeCollection($(this).attr("data-fyre-collection")); });
-});
-*/
